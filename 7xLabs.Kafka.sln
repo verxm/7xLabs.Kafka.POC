@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{
 		tests\IntegrationTests\Resources\otel-collector-config.yaml = tests\IntegrationTests\Resources\otel-collector-config.yaml
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Net8.Integration.Tests", "tests\IntegrationTests\Api.Net8.Integration.Tests\Api.Net8.Integration.Tests.csproj", "{97821A04-5507-4D47-8229-2C72837AF208}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{027BBFC4-6C81-4374-97A3-EE9D97F26B6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{027BBFC4-6C81-4374-97A3-EE9D97F26B6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{027BBFC4-6C81-4374-97A3-EE9D97F26B6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97821A04-5507-4D47-8229-2C72837AF208}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97821A04-5507-4D47-8229-2C72837AF208}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97821A04-5507-4D47-8229-2C72837AF208}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97821A04-5507-4D47-8229-2C72837AF208}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -35,6 +41,7 @@ Global
 		{027BBFC4-6C81-4374-97A3-EE9D97F26B6F} = {B5505709-B95A-4DF7-91B8-81756DC62B9B}
 		{6205DE0D-617D-48FA-B324-2FEC62F21C21} = {A889B8CF-DDAF-4F5B-B6CA-4CC763CB6FE1}
 		{0B08DCB4-DF9F-4130-80EC-ACE8A222E001} = {6205DE0D-617D-48FA-B324-2FEC62F21C21}
+		{97821A04-5507-4D47-8229-2C72837AF208} = {6205DE0D-617D-48FA-B324-2FEC62F21C21}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B7B8B53C-5742-486C-8514-162A11568530}

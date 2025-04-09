@@ -1,0 +1,6 @@
+@Api.Net8.Integration.Tests_HostAddress = http://localhost:5241
+
+GET {{Api.Net8.Integration.Tests_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
