@@ -7,6 +7,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B5505709-B95
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "7xLabs.Kafka", "src\7xLabs.Kafka\7xLabs.Kafka.csproj", "{027BBFC4-6C81-4374-97A3-EE9D97F26B6F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{A889B8CF-DDAF-4F5B-B6CA-4CC763CB6FE1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IntegrationTests", "IntegrationTests", "{6205DE0D-617D-48FA-B324-2FEC62F21C21}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{0B08DCB4-DF9F-4130-80EC-ACE8A222E001}"
+	ProjectSection(SolutionItems) = preProject
+		tests\IntegrationTests\Resources\compose.yml = tests\IntegrationTests\Resources\compose.yml
+		tests\IntegrationTests\Resources\otel-collector-config.yaml = tests\IntegrationTests\Resources\otel-collector-config.yaml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +33,8 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{027BBFC4-6C81-4374-97A3-EE9D97F26B6F} = {B5505709-B95A-4DF7-91B8-81756DC62B9B}
+		{6205DE0D-617D-48FA-B324-2FEC62F21C21} = {A889B8CF-DDAF-4F5B-B6CA-4CC763CB6FE1}
+		{0B08DCB4-DF9F-4130-80EC-ACE8A222E001} = {6205DE0D-617D-48FA-B324-2FEC62F21C21}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B7B8B53C-5742-486C-8514-162A11568530}
