@@ -10,9 +10,9 @@ public static class ClientConfigFactory
         var clientConfig = new ClientConfig
         {
             BootstrapServers = "127.0.0.1:9092",
-            SaslUsername = "",
-            SaslPassword = "",
-            SecurityProtocol = SecurityProtocol.SaslSsl,
+            SaslUsername = "user",
+            SaslPassword = "bitnami",
+            SecurityProtocol = SecurityProtocol.Plaintext,
             SaslMechanism = SaslMechanism.ScramSha512
         };
 

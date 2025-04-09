@@ -10,4 +10,8 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\src\7xLabs.Kafka\7xLabs.Kafka.csproj" />
+  </ItemGroup>
+
 </Project>

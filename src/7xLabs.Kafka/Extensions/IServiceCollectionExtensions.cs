@@ -2,7 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using System.Diagnostics.CodeAnalysis;
 
-namespace _7xLabs.Kafka.Extensions;
+namespace _7xLabs.Kafka;
 
 [ExcludeFromCodeCoverage]
 public static class IServiceCollectionExtensions
