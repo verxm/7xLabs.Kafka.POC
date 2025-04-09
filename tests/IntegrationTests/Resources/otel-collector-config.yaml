@@ -1,0 +1,26 @@
+receivers:
+  otlp:
+    protocols:
+      grpc:
+      http:
+
+processors:
+  batch:
+    timeout: 1s
+    send_batch_size: 10
+
+exporters:
+  elastic:
+    apm_server_url: "http://localhost:8200"
+  logging:
+
+service:
+  pipelines:
+    metrics:
+      receivers: [otlp]
+      exporters: [elastic, logging]
+      processors: [batch]
+    traces:
+      receivers: [otlp]
+      exporters: [elastic, logging]
+      processors: [batch]
