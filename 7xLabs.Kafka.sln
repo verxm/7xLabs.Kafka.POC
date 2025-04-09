@@ -19,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Net8.Integration.Tests", "tests\IntegrationTests\Api.Net8.Integration.Tests\Api.Net8.Integration.Tests.csproj", "{97821A04-5507-4D47-8229-2C72837AF208}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkerService.Net8.Integration.Tests", "tests\IntegrationTests\WorkerService.Net8.Integration.Tests\WorkerService.Net8.Integration.Tests.csproj", "{999CE5FA-E7DD-40B1-888C-23C02CF32E05}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{97821A04-5507-4D47-8229-2C72837AF208}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97821A04-5507-4D47-8229-2C72837AF208}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97821A04-5507-4D47-8229-2C72837AF208}.Release|Any CPU.Build.0 = Release|Any CPU
+		{999CE5FA-E7DD-40B1-888C-23C02CF32E05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{999CE5FA-E7DD-40B1-888C-23C02CF32E05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{999CE5FA-E7DD-40B1-888C-23C02CF32E05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{999CE5FA-E7DD-40B1-888C-23C02CF32E05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -42,6 +48,7 @@ Global
 		{6205DE0D-617D-48FA-B324-2FEC62F21C21} = {A889B8CF-DDAF-4F5B-B6CA-4CC763CB6FE1}
 		{0B08DCB4-DF9F-4130-80EC-ACE8A222E001} = {6205DE0D-617D-48FA-B324-2FEC62F21C21}
 		{97821A04-5507-4D47-8229-2C72837AF208} = {6205DE0D-617D-48FA-B324-2FEC62F21C21}
+		{999CE5FA-E7DD-40B1-888C-23C02CF32E05} = {6205DE0D-617D-48FA-B324-2FEC62F21C21}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B7B8B53C-5742-486C-8514-162A11568530}
