@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Net8.Integration.Tests"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkerService.Net8.Integration.Tests", "tests\IntegrationTests\WorkerService.Net8.Integration.Tests\WorkerService.Net8.Integration.Tests.csproj", "{999CE5FA-E7DD-40B1-888C-23C02CF32E05}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7xLabs.OpenTelemetry.Tracing", "src\7xLabs.OpenTelemetry.Tracing\7xLabs.OpenTelemetry.Tracing.csproj", "{2E339A21-6C32-43DD-B75F-1058E812C030}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{999CE5FA-E7DD-40B1-888C-23C02CF32E05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{999CE5FA-E7DD-40B1-888C-23C02CF32E05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{999CE5FA-E7DD-40B1-888C-23C02CF32E05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E339A21-6C32-43DD-B75F-1058E812C030}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E339A21-6C32-43DD-B75F-1058E812C030}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E339A21-6C32-43DD-B75F-1058E812C030}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E339A21-6C32-43DD-B75F-1058E812C030}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,6 +55,7 @@ Global
 		{0B08DCB4-DF9F-4130-80EC-ACE8A222E001} = {6205DE0D-617D-48FA-B324-2FEC62F21C21}
 		{97821A04-5507-4D47-8229-2C72837AF208} = {6205DE0D-617D-48FA-B324-2FEC62F21C21}
 		{999CE5FA-E7DD-40B1-888C-23C02CF32E05} = {6205DE0D-617D-48FA-B324-2FEC62F21C21}
+		{2E339A21-6C32-43DD-B75F-1058E812C030} = {B5505709-B95A-4DF7-91B8-81756DC62B9B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B7B8B53C-5742-486C-8514-162A11568530}
