@@ -2,14 +2,13 @@
 using OpenTelemetry.Trace;
 using System.Diagnostics.CodeAnalysis;
 
-namespace _7xLabs.Kafka.Extensions
+namespace _7xLabs.Kafka;
+
+[ExcludeFromCodeCoverage]
+public static class TracerProviderBuilderExtensions
 {
-    [ExcludeFromCodeCoverage]
-    public static class TracerProviderBuilderExtensions
+    public static TracerProviderBuilder AddKafkaInstrumentation(this TracerProviderBuilder tracerProviderBuilder)
     {
-        public static TracerProviderBuilder AddKafkaInstrumentation(this TracerProviderBuilder tracerProviderBuilder)
-        {
-            return tracerProviderBuilder.AddSource(KafkaActivityProvider.ACTIVITY_SOURCE_NAME);
-        }
+        return tracerProviderBuilder.AddSource(KafkaActivityProvider.ACTIVITY_SOURCE_NAME);
     }
 }
