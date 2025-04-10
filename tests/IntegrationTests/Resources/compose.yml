@@ -8,8 +8,8 @@ services:
     ports:
       - "4317:4317"
       - "4318:4318"
-    networks:
-      - movinetwork
+    networks: # unnecessary
+      - movinetwork 
 
-networks:
+networks: # unnecessary
   movinetwork:

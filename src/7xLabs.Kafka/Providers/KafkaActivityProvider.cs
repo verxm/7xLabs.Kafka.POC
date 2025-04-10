@@ -38,7 +38,7 @@ namespace _7xLabs.Kafka.Providers
 
             var activityContextFromHeaders = ExtractActivityContext(consumeResult.Message.Headers);
 
-            var activity = ActivitySource.CreateActivity(
+            var activity = ActivitySource.CreateActivity( // TODO: Understand why the second service does not appear in the serviceMap.
                 CONSUME_ACTIVITY_NAME,
                 ActivityKind.Consumer,
                 activityContextFromHeaders);
