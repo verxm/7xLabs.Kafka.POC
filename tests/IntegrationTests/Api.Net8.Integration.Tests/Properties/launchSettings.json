@@ -30,7 +30,8 @@
 
         "ServiceName": "7xLabs.Packages",
         "MicroServiceName": "7xLabs.Pkg.Api.Net8.Integration.Tests",
-        "OpenTelemetryCollectorUrl": "http://localhost:4317"
+        //"OpenTelemetryCollectorUrl": "http://localhost:4317/v1/traces"
+        "OpenTelemetryCollectorUrl": "http://localhost:4318/v1/traces"  
       }
     },
     "IIS Express": {

@@ -1,5 +1,6 @@
 ﻿using _7xLabs.OpenTelemetry.Tracing.Exceptions;
 using OpenTelemetry;
+using OpenTelemetry.Exporter;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
 
@@ -32,6 +33,8 @@ public static class OpenTelemetryTracingExtensions
             .AddOtlpExporter(options =>
             {
                 options.Endpoint = new Uri(_openTelemetryCollectorUrl!);
+                options.ExportProcessorType = ExportProcessorType.Simple;
+                options.Protocol = OtlpExportProtocol.HttpProtobuf; // TODO: Testar com GRPc
             });
 
         tracerProviderOptions?.Invoke(tracerProviderBuilder);
