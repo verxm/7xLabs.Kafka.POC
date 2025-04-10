@@ -29,7 +29,8 @@
         "ASPNETCORE_ENVIRONMENT": "Development",
 
         "ServiceName": "7xLabs.Packages",
-        "MicroServiceName": "7xLabs.Pkg.Api.Net8.Integration.Tests"
+        "MicroServiceName": "7xLabs.Pkg.Api.Net8.Integration.Tests",
+        "OpenTelemetryCollectorUrl": "http://localhost:4317"
       }
     },
     "IIS Express": {

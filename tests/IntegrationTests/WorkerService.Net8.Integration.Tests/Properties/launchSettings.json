@@ -10,7 +10,8 @@
         "ServiceName": "7xLabs.Packages",
         "MicroServiceName": "7xLabs.Pkg.WorkerService.Net8.Integration.Tests",
 
-        "KafkaConsumerGroup": "7xlabs-workerservice-integration-tests"
+        "KafkaConsumerGroup": "7xlabs-workerservice-integration-tests",
+        "OpenTelemetryCollectorUrl": "http://localhost:4317"
       }
     }
   }

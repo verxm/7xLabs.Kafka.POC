@@ -1,4 +1,6 @@
-﻿using Confluent.Kafka;
+﻿using _7xLabs.Kafka.Consumers;
+using _7xLabs.Kafka.Producers;
+using Confluent.Kafka;
 using Microsoft.Extensions.DependencyInjection;
 using System.Diagnostics.CodeAnalysis;
 
@@ -20,16 +22,16 @@ public static class IServiceCollectionExtensions
     internal static IServiceCollection AddKafkaProducer<TMessageKey, TMessageValue>(this IServiceCollection services, Action<ProducerConfig>? configureProducer = null)
     {
         var kafkaProducer = ProducerFactory.Create<TMessageKey, TMessageValue>(configureProducer);
-        // var instrumentedKafkaProducer = new InstrumentedProducer<TMessageKey, TMessageValue>(kafkaProducer);
+        var instrumentedKafkaProducer = new InstrumentedProducer<TMessageKey, TMessageValue>(kafkaProducer);
 
-        return services.AddSingleton<IProducer<TMessageKey, TMessageValue>>(kafkaProducer);
+        return services.AddSingleton<IProducer<TMessageKey, TMessageValue>>(instrumentedKafkaProducer);
     }
 
     internal static IServiceCollection AddKafkaConsumer<TMessageKey, TMessageValue>(this IServiceCollection services, Action<ConsumerConfig>? configureConsumer = null)
     {
         var kafkaConsumer = ConsumerFactory.Create<TMessageKey, TMessageValue>(configureConsumer);
-        // var instrumentedKafkaConsumer = new InstrumentedConsumer<TMessageKey, TMessageValue>(kafkaConsumer);
+        var instrumentedKafkaConsumer = new InstrumentedConsumer<TMessageKey, TMessageValue>(kafkaConsumer);
 
-        return services.AddSingleton<IConsumer<TMessageKey, TMessageValue>>(kafkaConsumer);
+        return services.AddSingleton<IConsumer<TMessageKey, TMessageValue>>(instrumentedKafkaConsumer);
     }
 }

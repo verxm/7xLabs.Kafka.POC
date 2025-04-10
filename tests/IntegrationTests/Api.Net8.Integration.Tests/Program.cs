@@ -1,4 +1,5 @@
 using _7xLabs.Kafka;
+using _7xLabs.OpenTelemetry.Tracing;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,7 +10,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// TODO: Add configs tp export Traces
+var _ = OpenTelemetryTracingExtensions.CreateTracerProvider(builder =>
+{
+    builder.AddKafkaInstrumentation();
+}, true, true);
 
 builder.Services.AddKafkaProducer();
 
