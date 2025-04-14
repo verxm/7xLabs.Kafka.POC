@@ -15,8 +15,8 @@ namespace _7xLabs.Kafka.Providers
     {
         internal const string ACTIVITY_SOURCE_NAME = "DirectOne.RogueOne.Kafka.Diagnostics";
 
-        const string PRODUCE_ACTIVITY_NAME = "Confluent.Kafka.Produce";
-        const string CONSUME_ACTIVITY_NAME = "Confluent.Kafka.Consume";
+        const string PRODUCE_ACTIVITY_NAME_TEMPLATE = "Kafka.Produce ({0})";
+        const string CONSUME_ACTIVITY_NAME_TEMPLATE = "Kafka.Consume ({0})";
 
         static readonly ActivitySource ActivitySource = new ActivitySource(ACTIVITY_SOURCE_NAME, AssemblyData.Version);
 
@@ -24,7 +24,9 @@ namespace _7xLabs.Kafka.Providers
             string targetTopic,
             Message<TKey, TValue> message)
         {
-            var activity = ActivitySource.StartActivity(PRODUCE_ACTIVITY_NAME, ActivityKind.Producer);
+            var activityName = string.Format(PRODUCE_ACTIVITY_NAME_TEMPLATE, targetTopic);
+
+            var activity = ActivitySource.StartActivity(activityName, ActivityKind.Producer);
 
             activity?.AddProduceTags(targetTopic, message);
 
@@ -38,8 +40,10 @@ namespace _7xLabs.Kafka.Providers
 
             var activityContextFromHeaders = ExtractActivityContext(consumeResult.Message.Headers);
 
+            var activityName = string.Format(CONSUME_ACTIVITY_NAME_TEMPLATE, consumeResult.Topic);
+
             var activity = ActivitySource.CreateActivity( // TODO: Understand why the second service does not appear in the serviceMap.
-                CONSUME_ACTIVITY_NAME,
+                activityName,
                 ActivityKind.Consumer,
                 activityContextFromHeaders);
 
